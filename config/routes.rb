@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'rooms/index'
   root 'pages#home'
