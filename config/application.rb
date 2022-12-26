@@ -13,6 +13,10 @@ module Chatrooms
     # config.active_storage.variant_processor = :mini_magick
     # config.active_storage.variant_processor = :vips
 
+    config.after_initialize do |_config|
+      User.update_all(status: User.statuses[:offline])
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
