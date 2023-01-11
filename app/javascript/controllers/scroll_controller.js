@@ -10,6 +10,7 @@ export default class extends Controller {
     console.log("Scroll controller connected")
     const messages = document.getElementById("messages");
     messages.addEventListener("DOMNodeInserted", this.resetScroll);
+    this.resetScrollWithoutThreshold(messages);
     // this.resetScroll(messages);
   }
 
